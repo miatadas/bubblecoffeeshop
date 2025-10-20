@@ -1,156 +1,138 @@
-/* bg */
-.bggirl{
-background-image: url("imgs/drw/girl4.png");
-background-size: cover;
-background-repeat: no-repeat;
-background-position: 5vh 2vw;
-background-attachment: fixed;
+
+/* fixes */
+.basefix {
+  left: -5px;
+  top: -5px;
+  position: fixed;
+}
+.workingif {
+  position: fixed;
+  top: 30%;
+  left: 35%;
+}
+.txtbb {
+  position: fixed;
+  width: 50vw;
+  top: 23%;
+  left: 35%;
 }
 
-/* "header" */
-.stylediv1{
-    display: flex;
-    width: fit-content;
-    width: 100%;
-    height: 100px;
-    background-color: white;
-    position: auto;
-    border-radius: 20px;
+/* effects */
+.blur {
+  filter: blur(2.5px);
 }
 
-/* card 1 */
-.card {
-  position: relative;
-  width: 560px;
-  height: 400px;
-  top: 20px;
-  left: 12.5px;
-  background-color: rgb(237, 88, 166);
-  border-radius: 10px;
-  display: flex;
-  align-items: cover;
-  justify-content: cover;
-  overflow: hidden;
-  perspective: 1000px;
-  box-shadow: 0 0 0 5px #ffffff80;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+.blurtwo {
+  filter: blur(4px);
 }
 
-.card svg {
-  width: 48px;
-  fill: #333;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+/*BG Big Clouds*/
+.bgimgone {
+  position: fixed;
+  left: -5px;
+  top: -5px;
+  width: 100vw;
+  animation: scrollone 20s linear infinite;
+}
+.bgimgtwo {
+  position: fixed;
+  left: -5px;
+  top: -5px;
+  width: 100vw;
+  animation: scrolltwo 20s linear infinite;
+  animation-delay: 10s linear infinite;
+}
+@keyframes scrollone {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes scrolltwo {
+ 0% {
+  transform: translateX(-100%);
+ }
+ 100% {
+  transform: translateX(0%);
+ }
 }
 
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+/*BG Medium Clouds*/
+.bgmdone {
+  position: fixed;
+  width: 100vw;
+  animation: scrollthree 40s linear infinite;
+}
+.bgmdtwo {
+  position: fixed;
+  width: 100vw;
+  animation: scrollfour 40s linear infinite;
+  animation-delay: 20s linear infinite;
+}
+@keyframes scrollthree {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes scrollfour {
+ 0% {
+  transform: translateX(-100%);
+ }
+ 100% {
+  transform: translateX(0%);
+ }
 }
 
-.card__content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  background-color: #f2f2f2;
-  transform: rotateX(-90deg);
-  transform-origin: bottom;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+/* BG Small Clouds*/
+.bgsmallone {
+  position: fixed;
+  width: 100vw;
+  animation: scrollfive 60s linear infinite;
+}
+.bgsmalltwo {
+  position: fixed;
+  width: 100vw;
+  animation: scrollsix 60s linear infinite;
+  animation-delay: 30s linear infinite;
+}
+@keyframes scrollfive {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes scrollsix {
+ 0% {
+  transform: translateX(-100%);
+ }
+ 100% {
+  transform: translateX(0%);
+ }
 }
 
-.card:hover .card__content {
-  transform: rotateX(0deg);
+/* stars */
+.stars {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 1px;
+    width: 1px;
+    border-radius: 50%;
+    animation: zoom 40s alternate infinite;
+    box-shadow: -42vw -4vh 0px 0px #fff,25vw -41vh 0px 0px #fff,-20vw 49vh 0px 1px #fff,5vw 40vh 1px 1px #fff,29vw 19vh 1px 0px #fff,-44vw -13vh 0px 0px #fff,46vw 41vh 0px 1px #fff,-3vw -45vh 0px 1px #fff,47vw 35vh 1px 0px #fff,12vw -8vh 1px 0px #fff,-34vw 48vh 1px 1px #fff,32vw 26vh 1px 1px #fff,32vw -41vh 1px 1px #fff,0vw 37vh 1px 1px #fff,34vw -26vh 1px 0px #fff,-14vw -49vh 1px 0px #fff,-12vw 45vh 0px 1px #fff,-44vw -33vh 0px 1px #fff,-13vw 41vh 0px 0px #fff,-36vw -11vh 0px 1px #fff,-23vw -24vh 1px 0px #fff,-38vw -27vh 0px 1px #fff,16vw -19vh 0px 0px #fff,28vw 33vh 1px 0px #fff,-49vw -4vh 0px 0px #fff,16vw 32vh 0px 1px #fff,36vw -18vh 1px 0px #fff,-25vw -30vh 1px 0px #fff,-23vw 24vh 0px 1px #fff,-2vw -35vh 1px 1px #fff,-25vw 9vh 0px 0px #fff,-15vw -34vh 0px 0px #fff,-8vw -19vh 1px 0px #fff,-20vw -20vh 1px 1px #fff,42vw 50vh 0px 1px #fff,-32vw 10vh 1px 0px #fff,-23vw -17vh 0px 0px #fff,44vw 15vh 1px 0px #fff,-40vw 33vh 1px 1px #fff,-43vw 8vh 0px 0px #fff,-48vw -15vh 1px 1px #fff,-24vw 17vh 0px 0px #fff,-31vw 50vh 1px 0px #fff,36vw -38vh 0px 1px #fff,-7vw 48vh 0px 0px #fff,15vw -32vh 0px 0px #fff,29vw -41vh 0px 0px #fff,2vw 37vh 1px 0px #fff,7vw -40vh 1px 1px #fff,15vw 18vh 0px 0px #fff,25vw -13vh 1px 1px #fff,-46vw -12vh 1px 1px #fff,-18vw 22vh 0px 0px #fff,23vw -9vh 1px 0px #fff,50vw 12vh 0px 1px #fff,45vw 2vh 0px 0px #fff,14vw -48vh 1px 0px #fff,23vw 43vh 0px 1px #fff,-40vw 16vh 1px 1px #fff,20vw -31vh 0px 1px #fff,-17vw 44vh 1px 1px #fff,18vw -45vh 0px 0px #fff,33vw -6vh 0px 0px #fff,0vw 7vh 0px 1px #fff,-10vw -18vh 0px 1px #fff,-19vw 5vh 1px 0px #fff,1vw 42vh 0px 0px #fff,22vw 48vh 0px 1px #fff,39vw -8vh 1px 1px #fff,-6vw -42vh 1px 0px #fff,-47vw 34vh 0px 0px #fff,-46vw 19vh 0px 1px #fff,-12vw -32vh 0px 0px #fff,-45vw -38vh 0px 1px #fff,-28vw 18vh 1px 0px #fff,-38vw -46vh 1px 1px #fff,49vw -6vh 1px 1px #fff,-28vw 18vh 1px 1px #fff,10vw -24vh 0px 1px #fff,-5vw -11vh 1px 1px #fff,33vw -8vh 1px 0px #fff,-16vw 17vh 0px 0px #fff,18vw 27vh 0px 1px #fff,-8vw -10vh 1px 1px #fff;
 }
-
-.card__title {
-  margin: 0;
-  font-size: 24px;
-  color: rgb(237, 88, 166);
-  font-weight: 700;
-}
-
-.card:hover svg {
-  scale: 0;
-}
-
-.card__description {
-  margin: 10px 0 0;
-  font-size: 16px;
-  color: rgb(143, 211, 255);
-  line-height: 1.4;
-}
-
-/* card2 */
-.card2 {
-  position: relative;
-  width: 560px;
-  height: 400px;
-  top: 50px;
-  left: 12.5px;
-  background-color: rgb(168, 132, 243);
-  border-radius: 10px;
-  display: flex;
-  align-items: cover;
-  justify-content: right;
-  overflow: hidden;
-  perspective: 1000px;
-  box-shadow: 0 0 0 5px #ffffff80;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.card2 svg {
-  width: 48px;
-  fill: #333;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.card2:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
-}
-
-.card2__content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  background-color: #f2f2f2;
-  transform: rotateX(-90deg);
-  transform-origin: bottom;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.card2:hover .card2__content {
-  transform: rotateX(0deg);
-}
-
-.card2__title {
-  margin: 0;
-  font-size: 24px;
-  color: rgb(168, 132, 243);
-  font-weight: 700;
-}
-
-.card2:hover svg {
-  scale: 0;
-}
-
-.card2__description {
-  margin: 10px 0 0;
-  font-size: 16px;
-  color: rgb(143, 211, 255);
-  line-height: 1.4;
-}
-
-/*Baloo Bhai*/
-.baloobhai-regular {
-    font-family: "Baloo Bhai", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+@keyframes zoom {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.2);
+    }
 }
